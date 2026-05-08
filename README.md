@@ -6,7 +6,7 @@ GPU 専用の Model Serving エンドポイントなど一部の機能は Free E
 
 # 関連記事
 
-- Qiita: [Databricks Free Edition で LLMOps を体験する](https://qiita.com/taka_yayoi) (公開後にURL差し替え)
+- Qiita: [Databricks Free Edition で LLMOps を体験する](https://qiita.com/taka_yayoi/items/dbea1db0e651b9773d35)
 
 # ノートブック構成
 
