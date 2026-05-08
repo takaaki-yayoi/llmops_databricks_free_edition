@@ -196,8 +196,19 @@ golden_data = pd.DataFrame([
      "expected_sentiment": "positive", "expected_topics": ["product_quality"]},
     {"review": "可もなく不可もなく。普通のパン屋さん。",
      "expected_sentiment": "neutral", "expected_topics": ["product_quality"]},
+    # 以下、複合感情・文脈依存の微妙なケース (few-shot の効きが現れやすい)
+    {"review": "美味しいんだけど、待ち時間が長すぎて二度と来たくない",
+     "expected_sentiment": "negative", "expected_topics": ["service", "product_quality"]},
+    {"review": "値段相応の味かな、特別感はないけど",
+     "expected_sentiment": "neutral", "expected_topics": ["product_quality", "price"]},
+    {"review": "新作は微妙だったけど、定番のクロワッサンは安定の美味しさ",
+     "expected_sentiment": "neutral", "expected_topics": ["product_quality"]},
+    {"review": "値段は高いけど、それに見合う品質だと思う",
+     "expected_sentiment": "positive", "expected_topics": ["price", "product_quality"]},
+    {"review": "対応は丁寧だったけど、肝心のパンが期待外れ",
+     "expected_sentiment": "negative", "expected_topics": ["service", "product_quality"]},
 ])
-# 注: 本番運用ではゴールデンデータは30件以上を推奨。本記事では概念実演のため7件にしています。
+# 注: 本番運用ではゴールデンデータは30件以上を推奨。本記事では概念実演のため12件にしています。
 
 eval_dataset = [
     {
