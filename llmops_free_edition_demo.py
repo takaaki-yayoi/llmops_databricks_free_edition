@@ -327,13 +327,16 @@ fig.show()
 # COMMAND ----------
 # MAGIC %md
 # MAGIC v2の方が良ければ alias を付け替えるだけで「本番のプロンプト」が更新されます。
+# MAGIC 下記コードは **意図的にコメントアウト** しています。実行すると production alias が v2 に上書きされ、
+# MAGIC 以降の v1 vs v2 比較が「v2 vs v2」になってしまうためです。本番運用で v2 への昇格判断ができたら、
+# MAGIC コメントアウトを解除して実行してください。
 
 # COMMAND ----------
-# v2をproductionに昇格
-mlflow.genai.set_prompt_alias(
-    name=PROMPT_NAME, alias="production", version=prompt_v2.version
-)
-print(f"production alias を v{prompt_v2.version} に昇格")
+# v2をproductionに昇格 (再実行時の事故防止のためコメントアウト)
+# mlflow.genai.set_prompt_alias(
+#     name=PROMPT_NAME, alias="production", version=prompt_v2.version
+# )
+# print(f"production alias を v{prompt_v2.version} に昇格")
 
 # COMMAND ----------
 # MAGIC %md
